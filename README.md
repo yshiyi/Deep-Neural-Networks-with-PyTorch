@@ -7,6 +7,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 
 ## Syllabus
 ### Chapter 1 Tensor and Datasets
-[1\. Tensor] (https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter01_01Tensor.py
+[1\. Tensor](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter01_01Tensor.py
 )\
+
 
