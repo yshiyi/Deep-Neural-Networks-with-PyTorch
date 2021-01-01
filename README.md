@@ -58,7 +58,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 [2\. Activation Function and Max Pooling](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter09_02ActFunc%26MaxPool.py)\
 [3\. Multiple IO Channels](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter09_03MultiIN%26MultiOUT.py)\
 [4\. Convolutional Neural Network](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter09_04CNN.py)\
-[5\. CNN with MINIST](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter09_05CNNwithMINIST.py)\
+[5\. CNN with MNIST](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter09_05CNNwithMNIST.py)\
 [6\. CNN with Batch Normalization](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter09_06CNNwithBatchNormalization.py)
 
 
