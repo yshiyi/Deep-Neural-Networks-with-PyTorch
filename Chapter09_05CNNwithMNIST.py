@@ -1,6 +1,6 @@
 ########################################################
 # Using Convolutional Neural Network to classify
-# handwritten digits from MINIST database
+# handwritten digits from MNIST database
 ########################################################
 import torch
 import torch.nn as nn
