@@ -37,7 +37,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 ### Chapter 7 Shallow Neural Networks
 [1\. Neural Network in 1D](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter07_01NN1D.py)\
 [2\. Neural Network in 1D with Multiple Nodes](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter07_02NN1D_MultiNode.py)\
-[3\. Neural Network with Multiple Dimensional Input](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter07_03NNMultiDIm.py)\
+[3\. Neural Network with Multiple Dimensional Input](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter07_03NNMultiDim.py)\
 [4\. Neural Network with Multiple Classes](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter07_04NNMultiClass.py)\
 [5\. Activation Functions](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter07_05ActivationFunctions.py)
 
