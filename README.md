@@ -71,12 +71,14 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 ####  2.1.1 Setting up your ML Application
 1. Seperate total data into training set, development set(for cross validation) and test set. Normally, they are seperated by 3/1/1 or, 7/3/0. When we have a huge size of data, we normally reduce the size of dev set and test set significantly.
 2. Make sure the data in dev set and test set come from the same distribution. For an example, the pictures are in the training set are from experters, and the test pictures are from users using app and blurry.
-
 3. Bias and variance. Underfitting => high bias, overfitting => high variance.\
-3.1. When the error in the dev set is higher than that is in the training set, then the model is most likely overfitted with high variance. 
+When the error in the dev set is higher than that is in the training set, then the model is most likely overfitted with high variance. When the error in both dev and training set is high, then model is most likely underfitted with high bias. The model could also be with high bias (large error in training set )and high variance (large error in dev set).
+4. Basic recipe for ML\
+   4.1. High bias? (training set performance)  -->  Try bigger network/more layers/more neurons (may reduce bias without hurting variance), train longer or maybe other NN architecture\ 
+   4.2. High variance? (dev set performance)  -->  More data (may reduce variance without hurting bias), regularization or maybe other NN architecture
+   4.3. Training a bigger network never hurts. The only drawback is the computational load.
 
-
-
+####  2.1.2 Regularizing your neural network
 
 
 
