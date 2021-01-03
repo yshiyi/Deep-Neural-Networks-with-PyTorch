@@ -81,10 +81,20 @@ When the error in the dev set is higher than that is in the training set, then t
 ####  2.1.2 Regularizing your neural network
 1. L2 regularization is also named as weight decay. w_new = (1 - regularization term) * w_old - lr * dw.\
    It works just lik the ordinally gradient descent, where you update w by subtracting lr times the original gradient you got from backprop. But now you are also multiplying w by this thing, which is a little less than 1.
+2. How does regularization prevent overfitting?\
+   The extra regularization term penalizes the weight matrics from being too large.\
+   Increasing the regularization term, we can reduce the value of the corresponding weight. When the regularization term is large, the weight is close to zero. Then that node will be zeroed out.
+3. Dropout regularization (Inverted dropout)\
+   3.1. Dropout is one of regularization methods to prevent overfitting.
+   3.2. activation = activation / dropout prob. Make sure the expectation remains the same.\
+4. Other regularization\
+   4.1. Data augmentation, transform photos (flip, rotate or distortion)
+   4.2. Early stopping. Stop training before dev set error gets larger.
+   
 
-
-
-
+####  2.1.3 Setting up your optimization problem
+1. Normalizaing inputs will speed up training. Without normalizing inputs, we have to use small learning rate. If the features come from very different scales, then it's important to normalize features to help learning algorithm run faster.
+2. 
 
 
 
