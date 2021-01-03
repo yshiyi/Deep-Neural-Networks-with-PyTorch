@@ -1,6 +1,6 @@
-# Deep-Neural-Networks-with-PyTorch
+# Deep Neural Networks with PyTorch
 <!-- GFM-TOC -->
-* [Deep-Neural-Networks-with-PyTorch](#Deep-Neural-Networks-with-PyTorch)
+* [Deep Neural Networks with PyTorch](#Deep-Neural-Networks-with-PyTorch)
     * [1. Syllabus](#Syllabus)
 <!-- GFM-TOC -->
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
