@@ -73,7 +73,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 2. Make sure the data in dev set and test set come from the same distribution. For an example, the pictures are in the training set are from experters, and the test pictures are from users using app and blurry.
 
 3. Bias and variance. Underfitting => high bias, overfitting => high variance.\
-3.1 When the error in the dev set is higher than that is in the training set, then the model is most likely overfitted with high variance. 
+3.1. When the error in the dev set is higher than that is in the training set, then the model is most likely overfitted with high variance. 
 
 
 
