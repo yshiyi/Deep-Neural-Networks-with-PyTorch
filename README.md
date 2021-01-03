@@ -79,7 +79,8 @@ When the error in the dev set is higher than that is in the training set, then t
    4.3. Training a bigger network never hurts. The only drawback is the computational load.
 
 ####  2.1.2 Regularizing your neural network
-
+1. L2 regularization is also named as weight decay. w_new = (1 - regularization term) * w_old - lr * dw.\
+   It works just lik the ordinally gradient descent, where you update w by subtracting lr times the original gradient you got from backprop. But now you are also multiplying w by this thing, which is a little less than 1.
 
 
 
