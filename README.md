@@ -1,14 +1,15 @@
 # Deep Neural Networks with PyTorch
 <!-- GFM-TOC -->
 * [Deep Neural Networks with PyTorch](#Deep-Neural-Networks-with-PyTorch)
-    * [1. Syllabus](#Syllabus)
+    * [1. Syllabus](#1-Syllabus)
+    * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
 <!-- GFM-TOC -->
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
 Followed by Feedforward deep neural networks, the role of different activation functions, 
 normalization and dropout layers. Then Convolutional Neural Networks and Transfer learning are also covered.
 
-## Syllabus
+##  1. Syllabus
 ### Chapter 1 Tensor and Datasets
 [1\. Tensor](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter01_01Tensor.py
 )\
@@ -65,7 +66,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 [6\. CNN with Batch Normalization](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/Chapter09_06CNNwithBatchNormalization.py)
 
 
-
+##  2. Improving Deep Neural Networks
 
 
 
