@@ -74,7 +74,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 3. Bias and variance. Underfitting => high bias, overfitting => high variance.\
 When the error in the dev set is higher than that is in the training set, then the model is most likely overfitted with high variance. When the error in both dev and training set is high, then model is most likely underfitted with high bias. The model could also be with high bias (large error in training set )and high variance (large error in dev set).
 4. Basic recipe for ML\
-   4.1. High bias? (training set performance)  -->  Try bigger network/more layers/more neurons (may reduce bias without hurting variance), train longer or maybe other NN architecture\ 
+   4.1. High bias? (training set performance)  -->  Try bigger network/more layers/more neurons (may reduce bias without hurting variance), train longer or maybe other NN architecture\
    4.2. High variance? (dev set performance)  -->  More data (may reduce variance without hurting bias), regularization or maybe other NN architecture\
    4.3. Training a bigger network never hurts. The only drawback is the computational load.
 
