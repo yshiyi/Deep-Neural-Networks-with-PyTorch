@@ -72,7 +72,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 1. Seperate total data into training set, development set(for cross validation) and test set. Normally, they are seperated by 3/1/1 or, 7/3/0. When we have a huge size of data, we normally reduce the size of dev set and test set significantly.
 2. Make sure the data in dev set and test set come from the same distribution. For an example, the pictures are in the training set are from experters, and the test pictures are from users using app and blurry.
 
-3. Bias and variance. Underfitting => high bias, overfitting => high variance. 
+3. Bias and variance. Underfitting => high bias, overfitting => high variance.\
 3.1 When the error in the dev set is higher than that is in the training set, then the model is most likely overfitted with high variance. 
 
 
