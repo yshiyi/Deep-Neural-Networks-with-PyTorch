@@ -1,7 +1,7 @@
 # Deep Neural Networks with PyTorch
 <!-- GFM-TOC -->
 * [1. Syllabus](#1-Syllabus)
-    * [Chapter 1 Tensor and Datasets](#Chapter 1-Tensor-and-Datasets)
+    * [Chapter 1 Tensor and Datasets](#Chapter-1-Tensor-and-Datasets)
 <!-- GFM-TOC -->
 <!-- GFM-TOC -->
 * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
