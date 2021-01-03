@@ -117,6 +117,13 @@ print("The accuracy: ", accuracy)
 # Use softmax function to convert the output to a probability
 ##############################################################
 # Create a Softmax object
+# softmax(x) = exp(x_i)/sum(exp(x_j))
+# dim = -1: the right-most dimension. In this case, it is column
+# dim = 1: w.r.t. each row. In other words, sum up the values in each row along the same column
+# dim = 2: w.r.t. each column. Sum up the values in each column along the same row
+# e.g. x = [[a, b], [c, d]]
+# dim = 0: exp(a)/(exp(a) + exp(c))
+# dim = 1: exp(a)/(exp(a) + exp(b))
 Softmax_fn = nn.Softmax(dim=-1)
 
 # The result is a tensor Probability,
