@@ -2,6 +2,14 @@
 <!-- GFM-TOC -->
 * [1. Syllabus](#1-Syllabus)
     * [Chapter 1 Tensor and Datasets](#Chapter-1-Tensor-and-Datasets)
+    * [Chapter 2 Linear Regression](#Chapter-2-Linear-Regression)
+    * [Chapter 3 Linear Regression PyTorch Way](#Chapter-3-Linear-Regression-PyTorch-Way)
+    * [Chapter 4 Multiple Input Output Linear Regression](#Chapter-4-Multiple-Input-Output-Linear-Regression)
+    * [Chapter 5 Logistic Regression for Classification](#Chapter-5-Logistic-Regression-for-Classification)
+    * [Chapter 6 Softmax Rergresstion](#Chapter-6-Softmax-Rergresstion)
+    * [Chapter 7 Shallow Neural Networks](Chapter-7-Shallow-Neural-Networks)
+    * [Chapter 8 Deep Networks](#Chapter-8-Deep-Networks)
+    * [Chapter 9 Convolutional Neural Network](#Chapter-9-Convolutional-Neural-Network)
 <!-- GFM-TOC -->
 <!-- GFM-TOC -->
 * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
@@ -96,7 +104,7 @@ When the error in the dev set is higher than that is in the training set, then t
 
 ####  2.1.3 Setting up your optimization problem
 1. Normalizaing inputs will speed up training. Without normalizing inputs, we have to use small learning rate. If the features come from very different scales, then it's important to normalize features to help learning algorithm run faster.
-2. 
+2. Initialize weights properly can prevent vanishing or exploding gradients in a very deep network.
 
 
 
