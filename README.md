@@ -13,6 +13,8 @@
 <!-- GFM-TOC -->
 <!-- GFM-TOC -->
 * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
+    * [2.1 Practical aspects of Deep Learning](#2-.-1-Practical-aspects-of-Deep-Learning)
+    * [2.2 Optimization Algorithms](#2-.-2-Optimization-Algorithms)
 <!-- GFM-TOC -->
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
@@ -101,15 +103,22 @@ When the error in the dev set is higher than that is in the training set, then t
    4.1. Data augmentation, transform photos (flip, rotate or distortion)
    4.2. Early stopping. Stop training before dev set error gets larger.
    
-
 ####  2.1.3 Setting up your optimization problem
 1. Normalizaing inputs will speed up training. Without normalizing inputs, we have to use small learning rate. If the features come from very different scales, then it's important to normalize features to help learning algorithm run faster.
 2. Initialize weights properly can prevent vanishing or exploding gradients in a very deep network.
 
 
+### 2.2 Optimization Algorithms
+####  2.2.1 Mini-Batch Gradient Descent
+1. One epoch denotes a single pass through training set.
+2. Choosing mini-batch size:
+   2.1. If mini-batch size = training set size (m): batch gradient descent (low noise, relatively large step, take too long per iteration)
+   2.2. If mini-batch size is 1: stochastic gradietn descent (single step, can be extremely noisy, won't converge to the global minimum, just wonder round the region of minimum)
+   2.3. In pratice, mini-batch size is between 1 and m: fastest learning, make progress without processing entire training set
+   2.4. Small training set (<= 2000)- batch gradient descent
+   2.5. Mini-batch size is another hyperparameter, try different values and find out the one that makes the gradient descent optimization algorithm as efficient as possible.
 
-
-
+####  2.2.2 Exponentially Weighted Averages
 
 
 
