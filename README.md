@@ -13,8 +13,8 @@
 <!-- GFM-TOC -->
 <!-- GFM-TOC -->
 * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
-    * [2.1 Practical aspects of Deep Learning](#2-.-1-Practical-aspects-of-Deep-Learning)
-    * [2.2 Optimization Algorithms](#2-.-2-Optimization-Algorithms)
+    * [1 Practical Aspects of Deep Learning](#1-Practical-Aspects-of-Deep-Learning)
+    * [2 Optimization Algorithms](#2-Optimization-Algorithms)
 <!-- GFM-TOC -->
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
@@ -79,7 +79,7 @@ normalization and dropout layers. Then Convolutional Neural Networks and Transfe
 
 
 ##  2. Improving Deep Neural Networks
-### 2.1 Practical aspects of Deep Learning
+### 2.1 Practical Aspects of Deep Learning
 ####  2.1.1 Setting up your ML Application
 1. Seperate total data into training set, development set(for cross validation) and test set. Normally, they are seperated by 3/1/1 or, 7/3/0. When we have a huge size of data, we normally reduce the size of dev set and test set significantly.
 2. Make sure the data in dev set and test set come from the same distribution. For an example, the pictures are in the training set are from experters, and the test pictures are from users using app and blurry.
