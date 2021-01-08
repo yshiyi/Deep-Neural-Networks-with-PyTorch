@@ -13,8 +13,8 @@
 <!-- GFM-TOC -->
 <!-- GFM-TOC -->
 * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
-    * [2.1 Practical Aspects of Deep Learning](#2-1-Practical-Aspects-of-Deep-Learning)
-    * [2.2 Optimization Algorithms](#2-2-Optimization-Algorithms)
+    * [2.1 Practical Aspects of Deep Learning](#21-Practical-Aspects-of-Deep-Learning)
+    * [2.2 Optimization Algorithms](#22-Optimization-Algorithms)
 <!-- GFM-TOC -->
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
