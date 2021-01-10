@@ -143,11 +143,72 @@ Note: 0.9^10 ~= 0.35 = 1/e, This means it takes about 10 steps for
 ```
 1. One of the advantages of the exponentially weighted average, is that it takes very little memory. To calculate V, we only need to swap \theta once. On the contrary, to explicitly compute the average, we have to sum over the last n true values and divid by n. It requires more memery and is computational more expensive.\
 2. Bias correction:\
-   It turns out if we strictly implement the exponentially weighted average, the first a couple of values of V will be much lower than the true values.\
+   It turns out if we strictly implement the exponentially weighted average, the initial phase of V (the first a couple of values of V) will be much lower than the true values.\
    V_0 = 0, V_1 = 0.1*\theta_1, V_2 = 0.09*\theta_1 + 0.1*\theta_2 ...\
    To remove this bias, we can let:\
    V_t = V_t / (1 - \beta^t)
    
+####  2.2.3 Gradient Descent with Momemtum
+1. The basic idea is to compute the exponentially weighted average of the gradients, and use that gradient to update the weights instead. 
+2. The conventional gradient descent method will the make the gradient slowly oscillate toward the minimum. This osillation slows down the gradient descent and prevents you from using a much larger learning rate.
+3. Using gradient descent with momemtum reduces the oscillations and increase the convergence rate to the minimum.
+```
+On iteration t:
+   Compute dW, db on the current mini-batch
+   V_dW = \beta * V_dW + (1 - \beta) * dW 
+   V_db = \beta * V_db + (1 - \beta) * db
+   W := W - lr * V_dW
+   b := b - lr * V_db
+```
+
+####  2.2.4 Root Mean Square Prop
+To speed up the learning in the horizontal direction and slow down in the vertical direction.
+```
+S_dW = \beta * S_dW + (1 - \beta) * dW^2   <- In the horizontal direction, it is normally small.
+W := W - lr * dW/sqrt(S_dW)   <- By dividing sqrt(S_dW), we increase the size of step in the horizontal direction.
+S_db = \beta * S_db + (1 - \beta) * db^2   <- In the vertical direction, it is no
+b := b - lr * db/sqrt(S_db)   <- By dividing sqrt(S_db), we reduce the step size (oscillations) in the vertical direction.
+To prevent to divid by 0, we normally add a very small term in the denominator, as sqrt(S_dW) + \epsilon.
+```
+
+####  2.2.4 Adam Optimization Algorithm
+1. The basic idea of Adam optimization algorithm is taking momentum and RMSprop, and putting them together.
+```
+Initialize: V_dW = 0, S_dW = 0, V_db = 0, S_db = 0
+On iteration t:
+   Compute dW, db using current mini-batch
+   V_dW = \beta1 * V_dW + (1 - \beta1) * dW, V_db = \beta1 * V_db + (1 - \beta1) * db   <- momentum, \beta1
+   S_dW = \beta2 * S_dW + (1 - \beat2) * dW^2, S_db = \beta2 * S_db + (1 - \beta2) * db^2   <- RMSprop, \beta2
+   Implementation of Adam algorithm:
+   V^corrected_dW = V_dW / (1 - \beta1^t),  V^corrected_db = V_db / (1 - \beta1^t)
+   S^corrected_dW = S_dW / (1 - \beta2^t),  S^corrected_db = S_db / (1 - \beta2^t)
+   W := W - lr * V^corrected_dW / (sqrt(S^corrected_dW) + \epsilon)
+   b := b - lr * V^corrected_db / (sqrt(S^corrected_db) + \epsilon)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
