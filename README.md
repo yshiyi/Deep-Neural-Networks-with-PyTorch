@@ -17,6 +17,13 @@
     - [2.1.2 Regularizing your neural network](#212-Regularizing-your-neural-network)
     - [2.1.3 Setting up your optimization problem](#213-Setting-up-your-optimization-problem)
   - [2.2 Optimization Algorithms](#22-Optimization-Algorithms)
+    - [2.2.1 Mini-Batch Gradient Descent](#221-Mini---Batch-Gradient-Descent)
+    - [2.2.2 Exponentially Weighted Averages](#222-Exponentially-Weighted-Averages)
+    - [2.2.3 Gradient Descent with Momemtum](#223-Gradient-Descent-with-Momentum)
+    - [2.2.4 Root Mean Square Prop](#224-Root-Mean-Square-Prop)
+    - [2.2.5 Adam Optimization Algorithm](#225-Adam-Optimization-Algorithm)
+    - [2.2.6 Learning Rate Decay](#226-Learning-Rate-Decay) 
+    - [2.2.7 The Problem of Local Optima](#227-The-Problem-of-Local-Optima)
 
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
@@ -223,7 +230,9 @@ epoch num  |  lr
 3. Manual decay
 ```
 
-
+####  2.2.7 The Problem of Local Optima
+1. Most points of zero gradient are not local optima, but saddle points. In a high dimentional space, the gradient at the local optima must be zero in each of the dimention. This chance of that happening is very small.
+2. The problem of plateaus. A  plateau is a region where the derivative is close to zero for a long time. This is where algorithms like momentum or RmsProp or Adam can really help your learning algorithm.
 
 
 
