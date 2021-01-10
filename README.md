@@ -14,13 +14,10 @@
 - [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
   - [2.1 Practical Aspects of Deep Learning](#21-Practical-Aspects-of-Deep-Learning)
     - [2.1.1 Setting up your ML Application](#211-Setting-up-your-ML-Application)
+    - [2.1.2 Regularizing your neural network](#212-Regularizing-your-neural-network)
+    - [2.1.3 Setting up your optimization problem](#213-Setting-up-your-optimization-problem)
   - [2.2 Optimization Algorithms](#22-Optimization-Algorithms)
-<!-- GFM-TOC -->
-* [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
-    * [2.1 Practical Aspects of Deep Learning](#21-Practical-Aspects-of-Deep-Learning)
-       *[2.1.1 Setting up your ML Application](#211-Setting-up-your-ML-Application)
-    * [2.2 Optimization Algorithms](#22-Optimization-Algorithms)
-<!-- GFM-TOC -->
+
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
 Followed by Feedforward deep neural networks, the role of different activation functions, 
@@ -208,7 +205,23 @@ Hyperparameters choice:
 ```
 
 ####  2.2.6 Learning Rate Decay
-
+1. The basic idea is to slowly reduce the learning rate as approaching toward the minimum.
+```
+lr = 1 / (1 + decay rate * epoch num) * lr0
+For example:
+lr0 = 0.2, decay rate = 1
+epoch num  |  lr
+    1         0.1
+    2         0.067
+    3         0.05
+    4         0.04
+```
+2. Exponential day
+```
+1. lr = 0.95^epoch-num * lr0
+2. lr = k / sqrt(epoch-num) * lr0
+3. Manual decay
+```
 
 
 
