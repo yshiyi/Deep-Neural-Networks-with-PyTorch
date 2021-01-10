@@ -14,6 +14,7 @@
 <!-- GFM-TOC -->
 * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
     * [2.1 Practical Aspects of Deep Learning](#21-Practical-Aspects-of-Deep-Learning)
+      *[2.1.1 Setting up your ML Application](#211-Setting-up-your-ML-Application)
     * [2.2 Optimization Algorithms](#22-Optimization-Algorithms)
 <!-- GFM-TOC -->
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
@@ -164,28 +165,45 @@ On iteration t:
 ####  2.2.4 Root Mean Square Prop
 To speed up the learning in the horizontal direction and slow down in the vertical direction.
 ```
-S_dW = \beta * S_dW + (1 - \beta) * dW^2   <- In the horizontal direction, it is normally small.
-W := W - lr * dW/sqrt(S_dW)   <- By dividing sqrt(S_dW), we increase the size of step in the horizontal direction.
-S_db = \beta * S_db + (1 - \beta) * db^2   <- In the vertical direction, it is no
-b := b - lr * db/sqrt(S_db)   <- By dividing sqrt(S_db), we reduce the step size (oscillations) in the vertical direction.
-To prevent to divid by 0, we normally add a very small term in the denominator, as sqrt(S_dW) + \epsilon.
+Compute in the horizontal direction, normally small:
+   S_dW = \beta * S_dW + (1 - \beta) * dW^2
+Update W by dividing sqrt(S_dW), we increase the step size in the horizontal direction
+   W := W - lr * dW/sqrt(S_dW)
+Compute in the vertical direction, normally large
+   S_db = \beta * S_db + (1 - \beta) * db^2
+Update d by dividing sqrt(S_db), we reduce the step size (oscillations) in the vertical direction
+   b := b - lr * db/sqrt(S_db)
+To prevent to divid by 0, we normally add a very small term in the denominator, 
+as sqrt(S_dW) + \epsilon.
 ```
 
-####  2.2.4 Adam Optimization Algorithm
-1. The basic idea of Adam optimization algorithm is taking momentum and RMSprop, and putting them together.
+####  2.2.5 Adam Optimization Algorithm
+1. The basic idea of Adam (Adaptive Moment Estimation) optimization algorithm is taking momentum and RMSprop, and putting them together.
 ```
 Initialize: V_dW = 0, S_dW = 0, V_db = 0, S_db = 0
 On iteration t:
    Compute dW, db using current mini-batch
-   V_dW = \beta1 * V_dW + (1 - \beta1) * dW, V_db = \beta1 * V_db + (1 - \beta1) * db   <- momentum, \beta1
-   S_dW = \beta2 * S_dW + (1 - \beat2) * dW^2, S_db = \beta2 * S_db + (1 - \beta2) * db^2   <- RMSprop, \beta2
-   Implementation of Adam algorithm:
-   V^corrected_dW = V_dW / (1 - \beta1^t),  V^corrected_db = V_db / (1 - \beta1^t)
-   S^corrected_dW = S_dW / (1 - \beta2^t),  S^corrected_db = S_db / (1 - \beta2^t)
-   W := W - lr * V^corrected_dW / (sqrt(S^corrected_dW) + \epsilon)
-   b := b - lr * V^corrected_db / (sqrt(S^corrected_db) + \epsilon)
+   Implement momentum (\beta1):
+      V_dW = \beta1 * V_dW + (1 - \beta1) * dW
+      V_db = \beta1 * V_db + (1 - \beta1) * db
+   Implement RMSprop (\beta2):
+      S_dW = \beta2 * S_dW + (1 - \beat2) * dW^2
+      S_db = \beta2 * S_db + (1 - \beta2) * db^2
+   Implement Adam algorithm:
+      V^corrected_dW = V_dW / (1 - \beta1^t),  V^corrected_db = V_db / (1 - \beta1^t)
+      S^corrected_dW = S_dW / (1 - \beta2^t),  S^corrected_db = S_db / (1 - \beta2^t)
+   Update coefficients:
+      W := W - lr * V^corrected_dW / (sqrt(S^corrected_dW) + \epsilon)
+      b := b - lr * V^corrected_db / (sqrt(S^corrected_db) + \epsilon)
+  
+Hyperparameters choice:
+   lr: needs to be tune
+   \beta1: 0.9
+   \beta2: 0.999
+   \epsilon: 10^-8
 ```
 
+####  2.2.6 Learning Rate Decay
 
 
 
