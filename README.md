@@ -120,12 +120,12 @@ When the error in the dev set is higher than that is in the training set, then t
 
 ####  2.2.2 Exponentially Weighted Averages
 ```
-V_t = \beta * V_t-1 + (1 - \beta) * \theta_t\
-beta: weighting factor\
-theta_t: true value in the current time/step\
-V_0: assigned the initial weighted value\
-V_t: weighted value in the current time/step\
-V_t-1: weighted value in the previous time/step\
+V_t = $\beta$ * V_t-1 + (1 - \beta) * \theta_t
+beta: weighting factor
+theta_t: true value in the current time/step
+V_0: assigned the initial weighted value
+V_t: weighted value in the current time/step
+V_t-1: weighted value in the previous time/step
 ```
 We can think V_t as approximately averaging over 1/(1-\beta). For example, if \beta = 0.9, we can think of this as averaging over the last 10 true values.
 
