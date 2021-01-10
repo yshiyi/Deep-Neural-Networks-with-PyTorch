@@ -111,20 +111,23 @@ When the error in the dev set is higher than that is in the training set, then t
 ### 2.2 Optimization Algorithms
 ####  2.2.1 Mini-Batch Gradient Descent
 1. One epoch denotes a single pass through training set.
-2. Choosing mini-batch size:
-   2.1. If mini-batch size = training set size (m): batch gradient descent (low noise, relatively large step, take too long per iteration)
-   2.2. If mini-batch size is 1: stochastic gradietn descent (single step, can be extremely noisy, won't converge to the global minimum, just wonder round the region of minimum)
-   2.3. In pratice, mini-batch size is between 1 and m: fastest learning, make progress without processing entire training set
-   2.4. Small training set (<= 2000)- batch gradient descent
+2. Choosing mini-batch size:\
+   2.1. If mini-batch size = training set size (m): batch gradient descent (low noise, relatively large step, take too long per iteration)\
+   2.2. If mini-batch size is 1: stochastic gradietn descent (single step, can be extremely noisy, won't converge to the global minimum, just wonder round the region of minimum)\
+   2.3. In pratice, mini-batch size is between 1 and m: fastest learning, make progress without processing entire training set\
+   2.4. Small training set (<= 2000)- batch gradient descent\
    2.5. Mini-batch size is another hyperparameter, try different values and find out the one that makes the gradient descent optimization algorithm as efficient as possible.
 
 ####  2.2.2 Exponentially Weighted Averages
+‘’‘
 V_t = \beta * V_t-1 + (1 - \beta) * \theta_t\
-\beta: weighting factor\
-\theta_t: true value in the current time/step\
-\V_t: weighted value in the current time/step\
-\V_t-1: weighted value in the previous time/step\
-
+beta: weighting factor\
+theta_t: true value in the current time/step\
+V_0: assigned the initial weighted value\
+V_t: weighted value in the current time/step\
+V_t-1: weighted value in the previous time/step\
+’‘’
+We can think V_t as approximately averaging over 1/(1-\beta). For example, if \beta = 0.9, we can think of this as averaging over the last 10 true values.
 
 
 
