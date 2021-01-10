@@ -11,6 +11,10 @@
     * [Chapter 8 Deep Networks](#Chapter-8-Deep-Networks)
     * [Chapter 9 Convolutional Neural Network](#Chapter-9-Convolutional-Neural-Network)
 <!-- GFM-TOC -->
+- [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
+  - [2.1 Practical Aspects of Deep Learning](#21-Practical-Aspects-of-Deep-Learning)
+    - [2.1.1 Setting up your ML Application](#211-Setting-up-your-ML-Application)
+  - [2.2 Optimization Algorithms](#22-Optimization-Algorithms)
 <!-- GFM-TOC -->
 * [2. Improving Deep Neural Networks](#2-Improving-Deep-Neural-Networks)
     * [2.1 Practical Aspects of Deep Learning](#21-Practical-Aspects-of-Deep-Learning)
