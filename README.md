@@ -120,14 +120,22 @@ When the error in the dev set is higher than that is in the training set, then t
 
 ####  2.2.2 Exponentially Weighted Averages
 ```
-V_t = $\beta$ * V_t-1 + (1 - \beta) * \theta_t
+V_t = \beta * V_t-1 + (1 - \beta) * \theta_t
 beta: weighting factor
 theta_t: true value in the current time/step
 V_0: assigned the initial weighted value
 V_t: weighted value in the current time/step
 V_t-1: weighted value in the previous time/step
 ```
-We can think V_t as approximately averaging over 1/(1-\beta). For example, if \beta = 0.9, we can think of this as averaging over the last 10 true values.
+We can think V_t as approximately averaging over 1/(1-\beta). For example, if \beta = 0.9, we can think of this as averaging over the last 10 true values.\
+For example:\
+```
+\beta = 0.9
+V_100 = 0.1*\theta_100 + 0.1*0.9*\theta_99 + 0.1*0.9^2*\theta_98 + ... + 0.1*0.9^n*\theta_(100-n) + ... + 0.1*0.9^99*\theta_1
+The exponentially decaying function reduces from 0.1 to 0.1*0.9^99.
+The way to compute V_100 is to take the element wise product between this exponentially decaying function and the true values and sum it up.
+Note: 0.9^10 ~= 0.35 = 1/e, This means it takes about 10 steps for the true value to decay to around 1/3 of the peak. Therefore, when \beta = 0.9, this is as if we are computing an exponentially weighted average that focused on just the last 10 true values.
+```
 
 
 
