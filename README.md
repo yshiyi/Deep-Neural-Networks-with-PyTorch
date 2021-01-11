@@ -236,6 +236,16 @@ epoch num  |  lr
 
 
 
+### 2.3 Tuning Process
+#### 2.3.1 Hyperparameter Tuning
+1. Learning rate, momemtum (0.9 is a good choice), # of hidden units, mini-batch size, # of layers, learning rate decay and etc.
+3. When the # of hyperparameters is small, we can use a grid. But random sampling is recommended.
+3. Using multifidelity to randomly select hyperparameters. First, sample in a large range of values. Second, once find out the region in which the hyperparameters work better than other areas, we zoom in that region and keep sampling randomly.
+4. Using an appropriate scale to pick hyperparameters:
+   4.1 Instead of sampling uniformly random, we can sample in the log scale.\
+       For example, 0.0001, 0.001, 0.01, 0.1. Take the log of those values, we have 4, 3, 2, 1.\
+       Another example, select hyperparameter for exponentially weighted averages. \beta = 0.9, ..., 0.999, we can take the log of (1 - \beta). The reason is 1/ (1 - \beta) gets very sensitive when \beta is close to 1. We need to sample more densely in the region of when \beta is close to 1.
+
 
 
 
