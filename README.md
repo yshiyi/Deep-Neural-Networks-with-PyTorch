@@ -24,6 +24,9 @@
     - [2.2.5 Adam Optimization Algorithm](#225-Adam-Optimization-Algorithm)
     - [2.2.6 Learning Rate Decay](#226-Learning-Rate-Decay) 
     - [2.2.7 The Problem of Local Optima](#227-The-Problem-of-Local-Optima)
+  - [2.3 Tuning Process](#23-Tuning-Process)
+    - [2.3.1 Hyperparameter Tuning](#231-Hyperparameter-Tuning)
+    - [2.3.2 Batch Normalization](#232-Batch-Normalization)
 
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
@@ -241,16 +244,25 @@ epoch num  |  lr
 1. Learning rate, momemtum (0.9 is a good choice), # of hidden units, mini-batch size, # of layers, learning rate decay and etc.
 3. When the # of hyperparameters is small, we can use a grid. But random sampling is recommended.
 3. Using multifidelity to randomly select hyperparameters. First, sample in a large range of values. Second, once find out the region in which the hyperparameters work better than other areas, we zoom in that region and keep sampling randomly.
-4. Using an appropriate scale to pick hyperparameters:
-   4.1 Instead of sampling uniformly random, we can sample in the log scale.\
-       For example, 0.0001, 0.001, 0.01, 0.1. Take the log of those values, we have 4, 3, 2, 1.\
-       Another example, select hyperparameter for exponentially weighted averages. \beta = 0.9, ..., 0.999, we can take the log of (1 - \beta). The reason is 1/ (1 - \beta) gets very sensitive when \beta is close to 1. We need to sample more densely in the region of when \beta is close to 1.
+4. Using an appropriate scale to pick hyperparameters. Instead of sampling uniformly random, we can sample in the log scale.\
+    Example1, 0.0001, 0.001, 0.01, 0.1. Take the log of those values, we have 4, 3, 2, 1.\
+    Example2, select hyperparameter for exponentially weighted averages. \beta = 0.9, ..., 0.999, we can take the log of (1 - \beta). The reason is 1/ (1 - \beta) gets very sensitive when \beta is close to 1. We need to sample more densely in the region of when \beta is close to 1.
+5. If you have enough computers to train a lot of models in parallel, then try a lot of different hyperparameters together. On the other hand, tune the hyperparameters up and down liking babysitting a model. 
 
+#### 2.3.2 Batch Normalization
+1. Normalize the values before the activation layer.
+```
+Given some intermediate values in the neural network, z_1, ..., z_m
+1. \mu = \sum (z_i) / m
+   \sigma^2 = \sum (z_i - \mu)^2 / m
+   z_norm = (z - \mu) / sqrt(\sigma^2 + \epsilon), mean zero and variance one
 
-
-
-
-
+2. z_tilt = \gamma * z_norm + \beta, \gamma and \beta are learnable variables
+   Using this function, we can normalize around other value with other variance.
+```
+2. Working with mini-batches
+3. Reduce the amount that the distribution of hidden unit values shifts around. In other words, it reduces the problem of the input values changing.
+4. Each mini-batch is scaled by the mean/variance computed on just that mini-batch. This adds some noise to the values z within that mini-batch. Because by adding noise to the hidden units, it's forcing the downstream hidden units not to rely too much on any one hidden unit. So similar to dropout, it adds some noise to each hidden layer's activations. This has a slight regularization effect. Use a big size of mini-batch, will reduce the regularization effect.
 
 
 
