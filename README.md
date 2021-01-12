@@ -27,6 +27,7 @@
   - [2.3 Tuning Process](#23-Tuning-Process)
     - [2.3.1 Hyperparameter Tuning](#231-Hyperparameter-Tuning)
     - [2.3.2 Batch Normalization](#232-Batch-Normalization)
+    - [2.3.3 Softmax Regression](#233-Softmax-Regression)
 
 This is an online course offered by Coursera. This course introduces how to develop deep learning models using Pytorch. 
 Starting with the Pytorch's tensors, each section covers different models such as Linear Regression, and logistic/softmax regression.
@@ -260,15 +261,25 @@ Given some intermediate values in the neural network, z_1, ..., z_m
 2. z_tilt = \gamma * z_norm + \beta, \gamma and \beta are learnable variables
    Using this function, we can normalize around other value with other variance.
 ```
-2. Working with mini-batches
+2. Batch norm processes data one mini batch at a time.
 3. Reduce the amount that the distribution of hidden unit values shifts around. In other words, it reduces the problem of the input values changing.
 4. Each mini-batch is scaled by the mean/variance computed on just that mini-batch. This adds some noise to the values z within that mini-batch. Because by adding noise to the hidden units, it's forcing the downstream hidden units not to rely too much on any one hidden unit. So similar to dropout, it adds some noise to each hidden layer's activations. This has a slight regularization effect. Use a big size of mini-batch, will reduce the regularization effect.
+5. Batch norm at test time. For different mini batch, we calculate the mean and variance. In addition,  we keep tracking the mean and variance. At test time, we estimate the mean and variance value using exponentially weighted average (across mini-batch). We then use these estimated values to compute the z_norm at test time.
 
 
-
-
-
-
+#### 2.3.3 Softmax Regression
+```
+On the lay l:
+   z^[l] = w^[l] * a^[l-1] + b^[l]
+Activation function:
+   t^[l] = exp(z^[l])
+   a^[l] = t^[l]_i / \sum(t^[l]_i),  i = 1, ..., # of hidden nodes
+```
+1. Softmax regression generalizes logistic regression to C classes. If C = 2, softmax regression reduces to logistic regression.
+2. Loss function:
+   L(yhat, y) = - \sum y_j * log(yhat_j), j = 1, ..., # of classes
+3. Cost function:
+   J = \sum L(yhat_i, y_i) / m, i = 1, ..., m (# of samples)
 
 
 
