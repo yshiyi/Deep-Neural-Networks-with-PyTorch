@@ -7,7 +7,7 @@
     * [Chapter 4 Multiple Input Output Linear Regression](#Chapter-4-Multiple-Input-Output-Linear-Regression)
     * [Chapter 5 Logistic Regression for Classification](#Chapter-5-Logistic-Regression-for-Classification)
     * [Chapter 6 Softmax Rergresstion](#Chapter-6-Softmax-Rergresstion)
-    * [Chapter 7 Shallow Neural Networks](Chapter-7-Shallow-Neural-Networks)
+    * [Chapter 7 Shallow Neural Networks](#Chapter-7-Shallow-Neural-Networks)
     * [Chapter 8 Deep Networks](#Chapter-8-Deep-Networks)
     * [Chapter 9 Convolutional Neural Network](#Chapter-9-Convolutional-Neural-Network)
 <!-- GFM-TOC -->
