@@ -1,6 +1,7 @@
 <!-- GFM-TOC -->
 * [1. Convolution](#1-Convolution)
 * [2. Perceptron](#2-Perceptron)
+* [3. Loss function](#3-Loss-function)
 
 
 # 1. Convolution
@@ -31,5 +32,15 @@ To deal with this issue, we can employ multiple perceptrons as below,\
 
 or increase the dimension of the dataset as shown below\
 ![image3](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Increase_dimension.png)
+
+# 3. Loss function
+The minimum mean squared error is not a very good option for gradient descent method. Compared to minimum squared error, the maximum likelihood is a proper option.\
+![image4](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Maximum_likelihood.png)
+
+As shown in the figure above, the basic idea of the maximum likelihood is to find the best distribution over the actual outputs according to the actual outputs. In this example, the probability 0.7 for the head and 0.3 for the tail should be the best distribution to describe the outputs. In other words, we try to calculate the probability of the outputs conditioned on the prior distribution.\
+![image5](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Maximum_likelihood2.png)
+
+
+
 
 
