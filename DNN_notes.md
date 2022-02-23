@@ -23,13 +23,13 @@ For CNN, we may think of the input image as the unstable input, f(t), and the ke
 We use a kernel to sweep through the whole image. For each round of calculation, we compute the summation of the product of the corresponding cell. The more similar between the kernel and the particular part of image, the higher convolution result we can obtain. In other words, the convolution in the CNN looks for the pattern that is similar to the kernel.
 
 # 2. Perceptron
-Perceptron is a method to seperate a dataset into two individual sets. It works for AND, OR, and NOT, but not for XOR, as shown in the figure below.
+Perceptron is a method to seperate a dataset into two individual sets. It works for AND, OR, and NOT, but not for XOR, as shown in the figure below.\
 ![image1](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Perceptron.png)
 
-To deal with this issue, we can employ multiple perceptrons as below,
+To deal with this issue, we can employ multiple perceptrons as below,\
 ![image2](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Multiple_perceptron.png)
 
-or increase the dimension of the dataset as shown below
+or increase the dimension of the dataset as shown below\
 ![image3](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Increase_dimension.png)
 
 
