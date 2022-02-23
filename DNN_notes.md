@@ -1,6 +1,6 @@
 <!-- GFM-TOC -->
 * [1. Convolution](#1-Convolution)
-* * [1. Perceptron](#1-Perceptron)
+* [2. Perceptron](#2-Perceptron)
 
 
 # 1. Convolution
