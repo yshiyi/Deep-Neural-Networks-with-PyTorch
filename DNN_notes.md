@@ -28,4 +28,7 @@ Perceptron is a method to seperate a dataset into two individual sets. It works 
 
 To deal with this issue, we can employ multiple perceptrons as below,
 ![image2](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Multiple_perceptron.png)
+or increase the dimension of the dataset as shown below
+![image3](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Increase_dimension.png)
+
 
