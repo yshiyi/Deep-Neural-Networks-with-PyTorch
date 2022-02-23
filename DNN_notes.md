@@ -24,4 +24,4 @@ We use a kernel to sweep through the whole image. For each round of calculation,
 
 # 2. Perceptron
 Perceptron is a method to seperate a dataset into two individual sets. It works for AND, OR, and NOT, but not for XOR, as shown in the figure below.
-![image1](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Perceptrn.png)
+![image1](https://github.com/yshiyi/Deep-Neural-Networks-with-PyTorch/blob/main/images/Perceptron.png)
